@@ -5,22 +5,38 @@ const pokemonList = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
 
 const fetchData = async () => {
     try{
-        const res = await fetch(pokemonList);
+        const res = await fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${Number(input.value)||String(input.value).toLowerCase()}`);
         const data = await res.json();
-        //call main function
+        showPokemon(data);
     }catch (err){
+        alert("Pokémon not found")
         console.log(err);
     }
 }
 
-
+/*
 const resolveUserInput = (input,pokemonList) => {
-    const { result } = pokemonList
-    const { id, name } = result;
-    const pokemonUrl = id.find((i) => i === Number(input)) || name.find((i) => i === input.toLowerCase())
-    return pokemonUrl;
-}
+    const { results } = pokemonList
+   // const { id, name } = results;
+    const pokemon = results.find((i) => i.id === Number(input)) || results.find((i) => i.name === String(input).toLowerCase())
+    if(pokemon !== undefined){
+        const pokemonUrl = pokemon.url;
+        return pokemonUrl;
+    }
+}*/
 
+const displayPokemonInfo = (url) =>{
+    const {height, id,  name, weight} = url;
+    return `
+    <h2 class="name-id">${String(name).toUpperCase()} #${id}</h2>
+    <p class="weight-height">Weight: ${weight} Height: ${height}</p>
+    `
+}
+    
+
+const showPokemon = (data) => {
+    console.log(displayPokemonInfo(data)) 
+}
 
 
 

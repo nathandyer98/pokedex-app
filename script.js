@@ -25,17 +25,19 @@ const resolveUserInput = (input,pokemonList) => {
     }
 }*/
 
-const displayPokemonInfo = (url) =>{
-    const {height, id,  name, weight} = url;
+const displayPokemon = (url) =>{
+    const {height, id,  name, weight, sprites} = url;
+    const { front_default } = sprites;
     return `
     <h2 class="name-id">${String(name).toUpperCase()} #${id}</h2>
     <p class="weight-height">Weight: ${weight} Height: ${height}</p>
-    `
-}
-    
+    <img src="${front_default}" alt="${name} sprite"/>
+     `
+}   
 
 const showPokemon = (data) => {
-    console.log(displayPokemonInfo(data)) 
+    spriteContainer.innerHTML = displayPokemon(data);
+    console.log(displayPokemon(data));
 }
 
 

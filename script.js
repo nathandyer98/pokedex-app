@@ -14,30 +14,32 @@ const fetchData = async () => {
     }
 }
 
-/*
-const resolveUserInput = (input,pokemonList) => {
-    const { results } = pokemonList
-   // const { id, name } = results;
-    const pokemon = results.find((i) => i.id === Number(input)) || results.find((i) => i.name === String(input).toLowerCase())
-    if(pokemon !== undefined){
-        const pokemonUrl = pokemon.url;
-        return pokemonUrl;
-    }
-}*/
-
 const displayPokemon = (url) =>{
-    const {height, id,  name, weight, sprites} = url;
+    const {height, id,  name, weight, sprites, types, stats} = url;
     const { front_default } = sprites;
+
+    let typeString = ``;
+    types.forEach((item) => {
+        const {type} = item;
+        typeString += `<div id="${type.name}" class="${type.name} type">${type.name}</div>`
+
+    })
+
     return `
-    <h2 class="name-id">${String(name).toUpperCase()} #${id}</h2>
+    <h3 class="name-id">${String(name).toUpperCase()} #${id}</h3>
     <p class="weight-height">Weight: ${weight} Height: ${height}</p>
     <img src="${front_default}" alt="${name} sprite"/>
+    ${typeString}
      `
 }   
 
+const updateStats = stat => {
+    
+}
+
 const showPokemon = (data) => {
     spriteContainer.innerHTML = displayPokemon(data);
-    console.log(displayPokemon(data));
+    //console.log(displayPokemon(data));
 }
 
 

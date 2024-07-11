@@ -14,8 +14,12 @@ const fetchData = async () => {
 }
 
 
-
-
+const resolveUserInput = (input,pokemonList) => {
+    const { result } = pokemonList
+    const { id, name } = result;
+    const pokemonUrl = id.find((i) => i === Number(input)) || name.find((i) => i === input.toLowerCase())
+    return pokemonUrl;
+}
 
 
 

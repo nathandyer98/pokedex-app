@@ -18,6 +18,11 @@ const displayPokemon = (url) =>{
     const {height, id,  name, weight, sprites, types, stats} = url;
     const { front_default } = sprites;
 
+    stats.forEach((s) => {
+        const {base_stat, stat} = s;
+        document.getElementById(`${stat.name}`).innerText = `${base_stat}`
+    })
+    
     let typeString = ``;
     types.forEach((item) => {
         const {type} = item;
@@ -32,11 +37,11 @@ const displayPokemon = (url) =>{
     ${typeString}
      `
 }   
-
+/*
 const updateStats = stat => {
-    
-}
 
+}
+*/
 const showPokemon = (data) => {
     spriteContainer.innerHTML = displayPokemon(data);
     //console.log(displayPokemon(data));

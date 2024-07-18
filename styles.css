@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #3c5aa6;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  #search-input {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #ffcb05;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #search-button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #search-button:hover {
+    background-color: #cc0000;
+  }
+  
+  #sprite-container {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .name-id {
+    font-size: 1.5em;
+    color: #3c5aa6;
+    margin-bottom: 10px;
+  }
+  
+  .weight-height {
+    margin-bottom: 10px;
+  }
+  
+  img {
+    width: 150px;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .type-container {
+    display: flex;
+    justify-content: center;
+    margin-left: -20px; /* Slightly push to the left */
+  }
+  
+  .type {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  table {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    border: 3px solid #3c5aa6; /* Increased border thickness */
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #3c5aa6;
+    color: white;
+    font-weight: bold;
+  }
+  
+  td:first-child {
+    font-weight: bold;
+  }
+  
+  /* Pokemon type colors */
+  .normal { background-color: #A8A878; color: white; }
+  .fire { background-color: #F08030; color: white; }
+  .water { background-color: #6890F0; color: white; }
+  .grass { background-color: #78C850; color: white; }
+  .electric { background-color: #F8D030; color: black; }
+  .ice { background-color: #98D8D8; color: black; }
+  .fighting { background-color: #C03028; color: white; }
+  .poison { background-color: #A040A0; color: white; }
+  .ground { background-color: #E0C068; color: black; }
+  .flying { background-color: #A890F0; color: white; }
+  .psychic { background-color: #F85888; color: white; }
+  .bug { background-color: #A8B820; color: white; }
+  .rock { background-color: #B8A038; color: white; }
+  .ghost { background-color: #705898; color: white; }
+  .dark { background-color: #705848; color: white; }
+  .dragon { background-color: #7038F8; color: white; }
+  .steel { background-color: #B8B8D0; color: black; }
+  .fairy { background-color: #F0B6BC; color: black; }

@@ -37,17 +37,11 @@ const displayPokemon = (url) =>{
     ${typeString}
      `
 }   
-/*
-const updateStats = stat => {
 
-}
-*/
 const showPokemon = (data) => {
     spriteContainer.innerHTML = displayPokemon(data);
     //console.log(displayPokemon(data));
 }
-
-
 
 searchBtn.addEventListener('click', fetchData); 
 
